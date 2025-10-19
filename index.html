@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numeros</title>
+    <style>
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+        }
+
+        .texto{
+            margin-top: 50px;
+            text-align: center;
+        }
+        h1{
+            background-color: cornflowerblue;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        input{
+            margin: 5px;
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc ;
+            
+        }
+
+        input[type="button"]{
+            cursor: pointer;
+            background-color: #f8f8f8;
+            color: rgb(197, 174, 173);
+            border: none;
+
+        }
+
+        
+
+        input[type="button"]:hover {
+            background-color: royalblue;
+        }
+
+        p{
+            
+            background-color: cornflowerblue;
+            border-radius: 12px;
+            padding: 8px;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="texto">
+        <h1>SOMAR</h1>
+    
+
+    <input type="number" name="numn1" id="numn1" placeholder="NÚMERO 1"> 
+    <input type="number" name="numn2" id="numn2" placeholder="NÚMERO 2">
+    <input type="button" value="somar" onclick="somar()">
+    <p id="res">Resultado</p>
+
+</div>
+
+
+<script>
+    function somar() {
+        var n1 = document.querySelector('input#numn1')
+        var n2 = document.querySelector('input#numn2')
+        var res = document.querySelector('#res')
+
+        var n1 = Number(n1.value)
+        var n2 = Number(n2.value)
+        var s = n1 + n2
+        res.innerHTML = `${n1} + ${n2} =  <strong>${s}</strong> `
+
+    }
+</script>
+    
+</body>
+</html>
